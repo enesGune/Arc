@@ -1,0 +1,116 @@
+.push-down {
+    position: relative;
+    display: flex;
+    align-items: center;
+    &:after {
+        content: "";
+        display: block;
+        box-sizing: border-box;
+        // position: absolute;
+        border-bottom: 2px solid #CDD1D3;
+        ;
+        width: 8px;
+        height: 8px;
+        border-right: 2px solid #CDD1D3;
+        ;
+        transform: rotate(45deg);
+        // left: 4px;
+        //top:-4px;
+    }
+}
+
+.push-right {
+    @extend .push-down;
+    &:after {
+        transform: rotate(318deg);
+        border-color: $blue;
+        width: 7px;
+        height: 7px;
+
+    }
+}
+
+.right-arr {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    width: 10px;
+    height: 10px;
+    border: 2px solid transparent;
+    border-radius: 100px;
+    &:after {
+        content: "";
+        display: block;
+        box-sizing: border-box;
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        border-bottom: 2px solid $tint2;
+        border-right: 2px solid $tint2;
+        transform: rotate(-45deg);
+        left: 0;
+        top: 0;
+    }
+    &.left {
+        transform: rotate(180deg);
+    }
+}
+
+.bottom-arr {
+    @extend .right-arr;
+    transform: rotate(90deg);
+    &:after {
+        width: 8px;
+        height: 8px;
+    }
+}
+
+.right-green-arr {
+    @extend .right-arr;
+    margin: 0 0 12px 0;
+    &:after {
+        top: 6px;
+        right: 6px;
+        border-color: $green;
+    }
+}
+
+.gg-search {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs, 1));
+    width: 16px;
+    height: 16px;
+    border: 2px solid;
+    border-radius: 100%;
+    margin-left: -4px;
+    margin-top: -4px;
+    &:after {
+        content: "";
+        display: block;
+        box-sizing: border-box;
+        position: absolute;
+        border-radius: 3px;
+        width: 2px;
+        height: 8px;
+        background: currentColor;
+        transform: rotate(-45deg);
+        top: 10px;
+        left: 12px
+    }
+}
+
+.plus-in-circle {
+    width: 14px;
+    height: 14px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    &:after,
+    &:before {
+        content: "";
+        width: 1px;
+        height: 6px;
+        background-color: #000;
+    }
+}

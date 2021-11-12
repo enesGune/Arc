@@ -1,0 +1,320 @@
+.btn-light {
+    padding: 11px 33px;
+    border-radius: 30px;
+    font-family: "all-round-gothic", sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    background-color: $white;
+    cursor: pointer;
+    color: $darkBg;
+    @include mainShadow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    //transition: all .2s ease-in-out;
+    -webkit-tap-highlight-color: transparent;
+    &:hover {
+        color: $green;
+        //transform: translateY(-5px);
+    }
+    &:focus {
+        box-shadow: inset rgba(0, 0, 0, 0.1) 2px 2px 4px, rgba(0, 0, 0, 0.1) 0 5px 15px;
+    }
+}
+
+.btn-green {
+    @extend .btn-light;
+    color: $green;
+    &:hover {
+        color: #00C480;
+    }
+}
+
+.btn-black {
+    @extend .btn-light;
+    color: $green;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, .5);
+    background-color: #282A31;
+    padding: 10.2px 32px;
+}
+
+.btn-green-white {
+    @extend .btn-light;
+    color: $white;
+    background-color: $green;
+    max-height: 31px;
+    &:hover {
+        color: $darkBg;
+    }
+}
+
+.switch-btn {
+    -webkit-tap-highlight-color: transparent;
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 47px;
+        height: 24px;
+    }
+    .switch input {
+        width: 0;
+        height: 0;
+        visibility: hidden;
+    }
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $tint4;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 20px;
+        width: 20px;
+        left: 1px;
+        bottom: 1px;
+        background-color: $white;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: .4s;
+    }
+    input:checked+.slider {
+        background-color: $darkBg;
+    }
+    input:focus+.slider {
+        box-shadow: 0 0 1px $darkBg;
+    }
+    input:checked+.slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
+    .slider.round {
+        border-radius: 34px;
+        box-shadow: inset 0 5px 15px rgba(0, 0, 0, .15);
+        border: 1px solid $white;
+    }
+    .slider.round:before {
+        border-radius: 50%;
+    }
+}
+
+.btn-push {
+    font-size: 14px;
+    position: relative;
+    padding: 11px 19px;
+    &:after {
+        content: "";
+        display: block;
+        box-sizing: border-box;
+        margin: -6px 0 0 12px;
+        // position: absolute;
+        border-bottom: 2px solid #CDD1D3;
+        ;
+        width: 8px;
+        height: 8px;
+        border-right: 2px solid #CDD1D3;
+        ;
+        transform: rotate(45deg);
+        // left: 4px;
+        //top:50%;
+    }
+}
+
+.btn-link {
+    color: $green;
+    text-decoration: underline;
+    font-family: "all-round-gothic", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.change-text-btn {
+    span {
+        padding: 0;
+        &+span {
+            display: none;
+        }
+    }
+    &:hover {
+        span {
+            display: none;
+            &+span {
+                display: flex;
+            }
+        }
+    }
+}
+
+.play-btn {
+    border: 1px solid #CDD1D3;
+    @include circle(32px, $white);
+    .triangle {
+        position: relative;
+        //  background-color: #64D996;
+        width: 0;
+        height: 0;
+        border-top: 7px solid transparent;
+        border-bottom: 7px solid transparent;
+        transform: translateX(2px);
+        border-left: 10px solid $green;
+        // transform: rotate(-60deg) skewX(-30deg) scale(1,.866);
+        /* &:before {
+            transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
+        }
+
+        &:after {
+            transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
+        }
+
+        &:after, &:before {
+            content: '';
+            position: absolute;
+            background-color: inherit;
+        }
+
+        &, &:before, &:after {
+            width:  6.5px;
+            height: 6.5px;
+            border-top-right-radius: 30%;
+        }*/
+    }
+}
+
+.arr-right-btn {
+    border: 1px solid #CDD1D3;
+    @include circle(32px, $white);
+}
+
+.arr-right-btn-white {
+    border: 1px solid $white;
+    @include circle(26px, $tint4);
+    @include mainShadow;
+}
+
+
+/*.btn-green {
+  @include font-bold;
+  border-radius: 5px;
+  @include font-style(14px, #000);
+  cursor: pointer;
+  display: inline-block;
+  background-color: #EAECEA;
+  padding: 8px 18px;
+
+  &:hover {
+    background-color: #6cd14d;
+  }
+}
+
+.btn-red-2 {
+  padding: 8px 18px;
+  @include font-bold;
+  line-height: 20px;
+  border-radius: 30px;
+  @include font-style(15px, $red);
+  background-color: #ffffff;
+  cursor: pointer;
+  border: 1px solid #EBEBEB;
+
+  &:hover {
+    background-color: #f3f1f1;
+  }
+}
+
+.checkbox-item {
+  position: relative;
+
+  [type=checkbox] {
+    position: absolute;
+    opacity: 0;
+    left: 0;
+    top: -7px;
+    width: 100%;
+    height: 33px;
+    cursor: pointer;
+  }
+
+  &:hover {
+    .btn-grey {
+      background-color: #dcdada;
+    }
+  }
+}
+
+.btn-grey {
+  @extend .btn-red;
+  background-color: #EBEBEB;
+  color: #000000;
+
+  &:hover {
+    background-color: #dcdada;
+  }
+
+  &.deactive {
+    color: #C4C4C4;
+  }
+}
+
+.btn-saved {
+  background: #FFFFFF;
+  border: 2px solid #00B612;
+  border-radius: 16px;
+  @include font-semibold;
+  @include font-style(16px, #00B612);
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.arr-item {
+  cursor: pointer;
+  width: 38px;
+  min-width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: #EBEBEB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    transition: all .2s ease-in-out;
+
+    path {
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 2px;
+    }
+  }
+
+  &:hover {
+    background-color: #dcdada;
+  }
+
+}
+
+.file-btn {
+  position: relative;
+
+  input {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    cursor: pointer;
+  }
+}
+
+.add-file-btn {
+  display: flex;
+}*/

@@ -1,0 +1,94 @@
+@mixin circle($value, $bg) {
+    min-width: $value;
+    width: $value;
+    height: $value;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $bg;
+}
+
+@mixin checkMark($value) {
+    display: inline-block;
+    transform: rotate(45deg);
+    height: $value;
+    width: calc(#{$value} / 2);
+    border-bottom: calc(#{$value} / 3) solid $green;
+    border-right: calc(#{$value} / 3) solid $green;
+}
+
+@mixin mainShadow() {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .13);
+}
+
+@mixin inShadow(){
+    box-shadow:  inset 5px -5px 10px #ffffff0d, 0 5px 15px rgba(0, 0, 0, .35), 0 -5px 15px rgba(255, 255, 255, .06);
+}
+
+@mixin dark-mode-drop-shadow() {
+    box-shadow: -5px -5px 15px rgba(0, 0, 0, .05), 5px 5px 15px rgba(0, 0, 0, .3);
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+    @if $inset {
+        -webkit-box-shadow: inset $top $left $blur $color;
+        -moz-box-shadow: inset $top $left $blur $color;
+        box-shadow: inset $top $left $blur $color;
+    }
+    @else {
+        -webkit-box-shadow: $top $left $blur $color;
+        -moz-box-shadow: $top $left $blur $color;
+        box-shadow: $top $left $blur $color;
+    }
+}
+
+@mixin badgeText($val: 11px) {
+    background-color: $blue;
+    color: $white;
+    border-radius: 18px;
+    font-family: "rigid-square", sans-serif;
+    font-size: 8px;
+    padding: 3px $val;
+}
+
+@mixin badgeTextblue($val: "11px") {
+    background-color: $tint3;
+    color: $blue;
+    border-radius: 18px;
+    font-family: "rigid-square", sans-serif;
+    font-size: 8px;
+    padding: 3px $val;
+}
+
+@mixin centre($axis: "both") {
+    position: absolute;
+    @if $axis=="y" {
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    @if $axis=="x" {
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+        //left: 0; right: 0;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    @if $axis=="both" {
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+}
