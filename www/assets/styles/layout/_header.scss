@@ -47,10 +47,14 @@
                 }
                 .right-item {
                     display: flex;
-                    .user-block {
+                    .user-item {
                         display: flex;
                         align-items: center;
                         padding: 10px 6px;
+                        border-radius: 8px;
+                        &.select {
+                            background: #F1F1F1;
+                        }
                         .user-text {
                             padding: 0 0 0 5px;
                             span {
