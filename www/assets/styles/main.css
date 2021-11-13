@@ -2734,16 +2734,16 @@ margin: 0 10px;
   padding: 7.5px 0;
   border-bottom: 1px solid #E7E7E7;
 }
-.header-root .header-wrapper .header-container .up-block .left-item ul {
+.header-root .header-wrapper .header-container .up-block .nav-item ul {
   display: flex;
 }
-.header-root .header-wrapper .header-container .up-block .left-item ul li {
+.header-root .header-wrapper .header-container .up-block .nav-item ul li {
   padding: 0 16px;
   border-left: 1px solid #E7E7E7;
   font-size: 12px;
   font-weight: normal;
 }
-.header-root .header-wrapper .header-container .up-block .left-item ul li:first-child {
+.header-root .header-wrapper .header-container .up-block .nav-item ul li:first-child {
   padding: 0 16px 0 0;
   border-left: none;
 }
