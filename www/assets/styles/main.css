@@ -2741,6 +2741,7 @@ margin: 0 10px;
   padding: 0 16px;
   border-left: 1px solid #E7E7E7;
   font-size: 12px;
+  font-family: "SourceSansPro-Regular", arial, helvetica, sans-serif;
   font-weight: normal;
 }
 .header-root .header-wrapper .header-container .up-block .nav-item ul li:first-child {
@@ -2755,6 +2756,7 @@ margin: 0 10px;
 }
 .header-root .header-wrapper .header-container .up-block .lang-item .lang-text {
   font-size: 12px;
+  font-family: "SourceSansPro-Regular", arial, helvetica, sans-serif;
   font-weight: normal;
 }
 .header-root .header-wrapper .header-container .mid-block {
@@ -2785,39 +2787,85 @@ margin: 0 10px;
 }
 .header-root .header-wrapper .header-container .mid-block .right-item .user-item .user-text span {
   font-size: 13px;
-  font-weight: 600;
+  font-family: "SourceSansPro-SemiBold", arial, helvetica, sans-serif;
+  font-weight: normal;
 }
-.header-root .header-wrapper .header-container .low-block {
+.header-root .header-wrapper .low-container {
+  border-top: 1px solid #D3D3D3;
+  border-bottom: 1px solid #D3D3D3;
+}
+.header-root .header-wrapper .low-container .low-block {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 13.5px 0;
-  border-top: 1px solid #D3D3D3;
-  border-bottom: 1px solid #D3D3D3;
+  position: relative;
 }
-.header-root .header-wrapper .header-container .low-block .category-item {
-  padding: 0 48px 0 0;
+.header-root .header-wrapper .low-container .low-block .category-item {
+  padding: 0 38px 0 0;
   border-right: 1px solid #D3D3D3;
 }
-.header-root .header-wrapper .header-container .low-block .category-item ul {
+.header-root .header-wrapper .low-container .low-block .category-item ul {
   display: flex;
 }
-.header-root .header-wrapper .header-container .low-block .category-item ul li {
+.header-root .header-wrapper .low-container .low-block .category-item ul li .category-link {
   margin: 0 0 0 48.11px;
   font-size: 15px;
-  font-weight: 600;
-  cursor: pointer;
+  font-family: "SourceSansPro-SemiBold", arial, helvetica, sans-serif;
+  font-weight: normal;
+  color: #000000;
 }
-.header-root .header-wrapper .header-container .low-block .category-item ul li:first-child {
+.header-root .header-wrapper .low-container .low-block .category-item ul li .category-link.zero {
   margin: 0;
 }
-.header-root .header-wrapper .header-container .low-block .right-item span {
+.header-root .header-wrapper .low-container .low-block .category-item ul li .open-menu {
+  display: flex;
+  position: absolute;
+  width: 1264px;
+  height: 377px;
+  top: 65px;
+}
+.header-root .header-wrapper .low-container .low-block .category-item ul li .open-menu .menu-right {
+  padding: 25px 32px 32px;
+}
+.header-root .header-wrapper .low-container .low-block .category-item ul li .open-menu .menu-right .right-title {
+  font-size: 24px;
+  font-family: "SourceSansPro-Bold", arial, helvetica, sans-serif;
+  font-weight: normal;
+}
+.header-root .header-wrapper .low-container .low-block .category-item ul li .open-menu .menu-right .right-block {
+  flex-direction: column;
+}
+.header-root .header-wrapper .low-container .low-block .category-item ul li .open-menu .menu-right .right-block .right-item {
+  font-size: 16px;
+  font-family: "SourceSansPro-SemiBold", arial, helvetica, sans-serif;
+  font-weight: normal;
+  color: #000000;
+  margin: 28px 0 0;
+}
+.header-root .header-wrapper .low-container .low-block .category-item ul li .open-menu .menu-left {
+  padding: 24px;
+}
+.header-root .header-wrapper .low-container .low-block .category-item ul li .open-menu .menu-left .left-block {
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.header-root .header-wrapper .low-container .low-block .category-item ul li .open-menu .menu-left .left-block .left-item {
+  font-size: 16px;
+  font-family: "SourceSansPro-SemiBold", arial, helvetica, sans-serif;
+  font-weight: normal;
+  color: #000000;
+}
+.header-root .header-wrapper .low-container .low-block .category-item ul li:hover .open-menu {
+  display: flex;
+}
+.header-root .header-wrapper .low-container .low-block .right-item span {
   margin: 0 0 0 48px;
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
 }
-.header-root .header-wrapper .header-container .low-block .right-item span:first-child {
+.header-root .header-wrapper .low-container .low-block .right-item span:first-child {
   margin: 0;
 }
 
