@@ -118,8 +118,17 @@
                                                     padding: 10px 18px;
                                                     margin: 16px 0 0;
                                                     text-align: center;
+                                                    position: relative;
                                                     &::before {
                                                         content: '';
+                                                        display: block;
+                                                        width: 8px;
+                                                        height: 8px;
+                                                        border-right: 2px solid $black;
+                                                        border-bottom: 2px solid $black;
+                                                        transform: rotate(-45deg);
+                                                        position: absolute;
+                                                        top: 15px;
                                                     }
                                                 }
                                                 a {
@@ -148,7 +157,7 @@
                                     min-width: 942px;
                                     .left-title {
                                         @include font-semibold;
-                                        font-size: 16px;
+                                        font-size: 18px;
                                     }
                                     .left-list {
                                         width: 100%;
