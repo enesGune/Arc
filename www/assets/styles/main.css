@@ -2819,7 +2819,7 @@ margin: 0 10px;
   margin: 0;
 }
 .header-root .header-wrapper .low-container .low-block .category-item ul li .open-menu {
-  display: flex;
+  display: none;
   position: absolute;
   justify-content: space-between;
   top: 45px;
@@ -2863,7 +2863,17 @@ margin: 0 10px;
   border-bottom: 2px solid #000000;
   transform: rotate(-45deg);
   position: absolute;
-  top: 15px;
+  top: 14px;
+}
+.header-root .header-wrapper .low-container .low-block .category-item ul li .open-menu .menu-right .right-list .right-block .right-item.active::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 2px;
+  position: absolute;
+  background-color: #000000;
+  top: 18px;
+  left: 7px;
 }
 .header-root .header-wrapper .low-container .low-block .category-item ul li .open-menu .menu-right .right-list .right-block .right-item a {
   color: #000000;
